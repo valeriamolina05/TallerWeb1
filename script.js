@@ -93,6 +93,39 @@ while(repetir){
 
             console.log("Total a pagar: $" + total); 
             break;
+        case 6:
+            contador[5]++;
+            function ingNota(mensaje) {
+                let nota;
+                do {
+                  nota = parseFloat(prompt(mensaje));
+                  if (nota > 5) {
+                    console.log("El rango de notas es desde 0 hasta 5. Por favor, ingrese nuevamente la nota.");
+                  }
+                } while (nota > 5);
+                return nota;
+              }
+              
+              let nota1 = ingNota("Ingrese la primera nota (0-5):");
+              let nota2 = ingNota("Ingrese la segunda nota (0-5):");
+              let nota3 = ingNota("Ingrese la tercera nota (0-5):");
+              let nota4 = ingNota("Ingrese la cuarta nota (0-5):");
+              
+              if (nota4 === 5) {
+                nota4++;
+                nota1++;
+                nota2++;
+                nota3++;
+              }
+              
+              let notaF = nota1 * 0.1 + nota2 * 0.2 + nota3 * 0.3 + nota4 * 0.4;
+              
+              if (notaF > 3.5) {
+                console.log("El estudiante ganó.");
+              } else {
+                console.log("El estudiante perdió.");
+              }              
+            break;
 
     }
     }
