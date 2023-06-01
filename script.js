@@ -21,7 +21,13 @@ while(repetir){
             let menor = numeros.sort((a, b) => a - b);
             console.log("Ordenado de menor a mayor:", menor);
             break;
-
+        case 2:
+            contador[1]++;
+            let radio = parseFloat(prompt("Ingrese el radio de la circunferencia:"));
+            const pi = 3.14159; 
+            let area = pi * radio * radio; 
+            console.log("El área de la circunferencia es: " + area);
+            break;
 
     }
     }
