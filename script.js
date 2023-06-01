@@ -126,7 +126,22 @@ while(repetir){
                 console.log("El estudiante perdió.");
               }              
             break;
+        case 7: 
+            repetir = false
+            for (let v = 0; v < contador.length; v++) {
+                console.log("Ejercicio " + (v + 1) + ": " + contador[v] + " veces");
+              }
+              
+              const max = contador.indexOf(Math.max(...contador)) + 1;
+              const min = contador.indexOf(Math.min(...contador)) + 1;
+              
+              console.log("\nEjercicio más ejecutado: " + max);
+              console.log("Ejercicio menos ejecutado: " + min);
+            break;
 
+        default:
+            console.log ('Opción invalida')
+            break;
     }
     }
 
