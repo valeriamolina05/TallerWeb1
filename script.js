@@ -67,6 +67,32 @@ while(repetir){
               }
             
             break;
+        case 5:
+            contador[4]++;
+            let valor = parseFloat(prompt("Ingrese el valor de compra:"));
+            let cantidad = parseInt(prompt("Ingrese la cantidad:"));
+
+            let subtotal = valor * cantidad; 
+            let iva = subtotal * 0.19; 
+            let total;
+
+            if (subtotal > 500000 && subtotal < 1000000) {
+            total = subtotal - iva; 
+            console.log("Valor de compra: $" + subtotal);
+            console.log("Devolución iva (19%): $" + iva);
+            } else if (subtotal > 1000000) {
+            let descuento = subtotal * 0.1; 
+            total = subtotal - descuento; 
+            console.log("Valor de compra: $" + subtotal);
+            console.log("Descuento (10%): $" + descuento);
+            } else {
+            total = subtotal + iva; 
+            console.log("Valor de compra: $" + subtotal);
+            console.log("IVA (19%): $" + iva);
+            }
+
+            console.log("Total a pagar: $" + total); 
+            break;
 
     }
     }
