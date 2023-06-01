@@ -42,6 +42,31 @@ while(repetir){
                 console.log("El triángulo es escaleno.");
               }
             break;
+        case 4:
+            contador[3]++;
+            let num1= parseInt(prompt('Ingrese un número: '));
+            let num2 = parseInt(prompt('Ingrese un número: '));
+
+            function numAmigos(numero) {
+                let suma = 0;
+                for (let i = 1; i <= numero / 2; i++) {
+                  if (numero % i === 0) {
+                    suma += i;
+                  }
+                }
+                return suma;
+              }
+            
+              const div1 = numAmigos(num1);
+              const div2 = numAmigos(num2);
+            
+              if (div1 === num2 && div2 === num1) {
+                console.log(num1 + " y " + num2 + " son números amigos.");
+              } else {
+                console.log(num1 + " y " + num2 + " no son números amigos.");
+              }
+            
+            break;
 
     }
     }
